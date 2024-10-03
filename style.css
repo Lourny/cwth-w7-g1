@@ -11,6 +11,14 @@
   --bg-blue: rgb(52, 152, 219);
   --bg-white: rgb(255, 255, 255);
 }
+[data-theme="dark"] {
+  font-size: 62.5%;
+  --bg-red: rgb(235, 0, 98);
+  --bg-gray: rgb(0, 26, 255);
+  --bg-lightGray: rgb(68, 68, 68);
+  --bg-blue: rgb(52, 152, 219);
+  --bg-white: rgb(255, 255, 255);
+  }
 body {
   font-size: 1.6rem;
   background-color: lightgray;
@@ -120,10 +128,49 @@ body {
   cursor: pointer;
 }
 
-.anim{
-    background-color: orange;
-    width: 20rem;
-    height: 20rem;
-    margin: 40px auto;
+/* .anim{
+  --size: clamp(1rem, 5vw, 10rem);
+width: var(--size);
+aspect-ratio: 1;
+background: deeppink;
+border: 3px solid;
+animation: anim 3000ms linear(0, 0.75, 1) infinite;
+border-radius: 50%;
+}
+@keyframes anim{
+  100% {
+  translate: calc(90vw - var(--size));
+  }
+  } */
+   .box1 {
+width: 50px;
+height: 50px;
+border-radius: 0%;
+margin: auto;
+background-color: green;
+animation: GFG 5s infinite linear;
 }
 
+@keyframes GFG {
+0% {
+transform: rotate(0deg)
+translateY(100px) rotate(0deg) scale(1);
+}
+25% {
+  transform: rotate(0deg)
+  translateY(100px) rotate(0deg) scale(2);
+  }
+  50% {
+    transform: rotate(0deg)
+    translateY(100px) rotate(0deg) scale(3);
+    }
+    75% {
+      transform: rotate(0deg)
+      translateY(100px) rotate(0deg) scale(4);
+      }
+100% {
+transform: rotate(360deg)
+translateY(100px) rotate(-360deg) scale(1);
+
+}
+}

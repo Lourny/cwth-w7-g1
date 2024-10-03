@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --bg-red: rgb(235, 0, 98);
+  --bg-gray: rgb(45, 45, 45);
+  --bg-lightGray: rgb(68, 68, 68);
+  --bg-blue: rgb(52, 152, 219);
+  --bg-white: rgb(255, 255, 255);
+}
+body {
+  font-size: 1.6rem;
+  background-color: lightgray;
+}
+.box {
+  width: 20rem;
+  min-height: 20rem;
+  background-color: white;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 2rem;
+}
+.box::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: #c1ebe1be;
+  left: 0;
+  top: 0;
+  transform: rotate(-20deg);
+  z-index: 10;
+}
+.box::after {
+  position: absolute;
+  content: " ";
+  bottom: -2rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: #08a099;
+  right: -1rem;
+  border-radius: 50%;
+}
+
+.profile {
+  width: 10rem;
+  height: 10rem;
+  background-color: #a07c08;
+  border-radius: 50%;
+  border: 1rem solid #95e2c4;
+  display: inline-block;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+  text-align: center;
+}
+.data button {
+  outline: none;
+  border: none;
+  background-color: #3598da;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  width: 5.5rem;
+  border-radius: 0.3rem;
+}
+.data button:hover {
+  transition: all 300ms linear;
+}
+
+.form {
+  margin: 40px auto;
+  background-color: var(--bg-gray);
+  width: 30rem;
+  min-height: 20rem;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.form > input {
+  background-color: var(--bg-lightGray);
+  width: 100%;
+  padding: 0.5rem;
+  outline: 0;
+  border: 0;
+  border-radius: 0.5rem;
+}
+.form > label{
+    color: var(--bg-white);
+}
+
+.form > button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  outline: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  background-color: var(--bg-red);
+  color: var(--bg-white);
+}
+.form > button:hover {
+  background-color:rgb(106, 14, 52) ;
+  transition: all 300ms linear;
+  cursor: pointer;
+}
+
+.anim{
+    background-color: orange;
+    width: 20rem;
+    height: 20rem;
+    margin: 40px auto;
+}
+
